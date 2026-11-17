@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área do Artesão — Coletivo Artesãos da Orla</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #F8FAFC; color: #0F172A; font-size: 16px; }
+    header { background: #0F3D5E; color: #FFFFFF; padding: 16px; display: flex; justify-content: space-between; align-items: center; }
+    main { max-width: 480px; margin: 0 auto; padding: 16px; }
+    label { display: block; font-weight: bold; margin-top: 14px; margin-bottom: 6px; }
+    input, select { width: 100%; padding: 12px; font-size: 16px; border: 2px solid #64748B; border-radius: 8px; box-sizing: border-box; min-height: 44px; }
+    .btn-salvar { width: 100%; background: #14532D; color: #FFFFFF; border: none; padding: 14px; font-size: 16px; font-weight: bold; border-radius: 8px; margin-top: 18px; min-height: 44px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <header>
+    <strong>Área do Artesão</strong>
+    <a href="index.html" style="color:#FACC15; font-weight:bold;">← Voltar à Vitrine</a>
+  </header>
+  <main>
+    <h1>Cadastrar Nova Peça</h1>
+    <form>
+      <label for="titulo">1. Nome da peça artesanal *</label>
+      <input id="titulo" type="text" required placeholder="Ex.: Porta-joias Concha Marinha">
+
+      <label for="categoria">2. Categoria *</label>
+      <select id="categoria" required>
+        <option value="Cerâmica Fria">Cerâmica Fria</option>
+        <option value="Biojoias">Biojoias</option>
+        <option value="Crochê e Macramê">Crochê e Macramê</option>
+      </select>
+
+      <label for="preco">3. Preço (R$) *</label>
+      <input id="preco" type="number" step="0.01" min="0.01" required placeholder="45.00">
+
+      <label for="disponibilidade">4. Disponibilidade *</label>
+      <select id="disponibilidade" required>
+        <option value="PRONTA_ENTREGA">✓ Pronta-entrega</option>
+        <option value="SOB_ENCOMENDA">⏳ Sob encomenda</option>
+      </select>
+
+      <button class="btn-salvar" type="submit">Publicar Peça na Vitrine</button>
+    </form>
+  </main>
+</body>
+</html>
