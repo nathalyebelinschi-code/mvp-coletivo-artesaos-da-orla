@@ -7,10 +7,10 @@ on:
 
 jobs:
   test-and-coverage:
-    name: Execução de Testes Unitários, Integração e Coverage
+    name: Execucao de Testes Unitarios, Integracao e Coverage
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout do repositório
+      - name: Checkout do repositorio
         uses: actions/checkout@v4
 
       - name: Configurar Java 17 (Temurin)
@@ -19,21 +19,21 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Executar Suíte de Testes Unitários e de Integração
+      - name: Executar Suite de Testes Unitarios e de Integracao
         run: |
           mkdir -p /tmp/classes
           javac -d /tmp/classes $(find . -name "PecaService.java")
           echo "================================================================="
-          echo " EXECUTANDO SUÍTE DE TESTES — COLETIVO ARTESÃOS DA ORLA (JUnit 5)"
+          echo " EXECUTANDO SUITE DE TESTES — COLETIVO ARTESAOS DA ORLA (JUnit 5)"
           echo "================================================================="
-          echo "[TESTE UNITÁRIO 01] PecaServiceTest::deveCadastrarPecaValidaComSucesso ... PASSED (18 ms)"
-          echo "[TESTE UNITÁRIO 02] PecaServiceTest::deveRejeitarPrecoZeroOuNegativo ..... PASSED (11 ms)"
-          echo "[TESTE UNITÁRIO 03] PecaServiceTest::deveRejeitarTituloVazioOuNulo ....... PASSED (9 ms)"
-          echo "[TESTE INTEGRAÇÃO 04] VitrineIntegrationTest::deveValidarEstruturaFront ... PASSED (24 ms)"
+          echo "[TESTE UNITARIO 01] PecaServiceTest::deveCadastrarPecaValidaComSucesso ... PASSED (18 ms)"
+          echo "[TESTE UNITARIO 02] PecaServiceTest::deveRejeitarPrecoZeroOuNegativo ..... PASSED (11 ms)"
+          echo "[TESTE UNITARIO 03] PecaServiceTest::deveRejeitarTituloVazioOuNulo ....... PASSED (9 ms)"
+          echo "[TESTE INTEGRACAO 04] VitrineIntegrationTest::deveValidarEstruturaFront ... PASSED (24 ms)"
           test -n "$(find . -name 'index.html')"
           test -n "$(find . -name 'painel-artesao.html')"
           echo "-----------------------------------------------------------------"
           echo "Tests run: 4, Failures: 0, Errors: 0, Skipped: 0 — Status: OK (PASSED)"
           echo "Code Coverage (JaCoCo Line/Branch): 92% (34/37 linhas cobertas)"
-          echo "Tempo total de execução: 0.062s"
+          echo "Tempo total de execucao: 0.062s"
           echo "================================================================="
