@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coletivo Artesãos da Orla — Vitrine Pública</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #F8FAFC; color: #0F172A; font-size: 16px; }
+    header { background: #0F3D5E; color: #FFFFFF; padding: 16px; display: flex; justify-content: space-between; align-items: center; }
+    header h1 { font-size: 1.2rem; margin: 0; }
+    .btn-restrito { background: #FACC15; color: #0F172A; border: none; padding: 12px 16px; border-radius: 8px; font-weight: bold; min-height: 44px; cursor: pointer; }
+    main { max-width: 480px; margin: 0 auto; padding: 16px; }
+    .filtros { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+    .filtro-btn { border: 2px solid #0F3D5E; background: #FFFFFF; color: #0F3D5E; padding: 10px 14px; border-radius: 20px; font-weight: bold; min-height: 44px; cursor: pointer; }
+    .filtro-btn.ativo { background: #0F3D5E; color: #FFFFFF; }
+    .card { background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+    .selo-pronta { background: #DCFCE7; color: #14532D; padding: 4px 10px; border-radius: 6px; font-weight: bold; display: inline-block; }
+    .selo-encomenda { background: #FEF3C7; color: #78350F; padding: 4px 10px; border-radius: 6px; font-weight: bold; display: inline-block; }
+    .btn-whats { display: block; text-align: center; background: #14532D; color: #FFFFFF; text-decoration: none; padding: 14px; border-radius: 8px; font-weight: bold; margin-top: 12px; min-height: 44px; }
+    .agenda { border: 2px solid #1D4ED8; background: #EFF6FF; padding: 14px; border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Artesãos da Orla</h1>
+      <small>Pontal do Paraná • PR</small>
+    </div>
+    <button class="btn-restrito" type="button">🔒 Área do Artesão</button>
+  </header>
+  <main>
+    <div class="filtros" role="group" aria-label="Filtrar por categoria">
+      <button class="filtro-btn ativo" type="button">Todos</button>
+      <button class="filtro-btn" type="button">Cerâmica Fria</button>
+      <button class="filtro-btn" type="button">Biojoias</button>
+    </div>
+    <article class="card">
+      <h2>Porta-joias Concha Marinha</h2>
+      <p>Artesã Marina Costa • Balneário Shangri-lá</p>
+      <p><strong>R$ 45,00</strong> — <span class="selo-pronta">✓ Pronta-entrega</span></p>
+      <a class="btn-whats" href="https://wa.me/5541999999999?text=Ola!%20Tenho%20interesse%20no%20Porta-joias%20Concha%20Marinha." target="_blank" rel="noopener">💬 Encomendar no WhatsApp</a>
+    </article>
+    <section class="agenda">
+      <strong>📅 Próxima Feira Presencial:</strong>
+      <p style="margin:6px 0 0;">Sábado, das 09h às 16h — Praça de Ipanema</p>
+    </section>
+  </main>
+</body>
+</html>
