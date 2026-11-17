@@ -19,5 +19,6 @@ jobs:
       - name: Validar estrutura e sintaxe do MVP
         run: |
           test -f front-end/index.html
+          test -f front-end/painel-artesao.html
           javac -d /tmp backend/src/main/java/br/com/artesaosorla/PecaService.java
           echo "Build e validacao concluidos com sucesso!"
